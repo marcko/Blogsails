@@ -9,12 +9,10 @@ module.exports = {
 
   attributes: {
   	title:{
-  		type:'string',
-  		required:true
+  		type:'string'
   	},
   	body:{
-  		type:'text',
-  		required:true
+  		type:'text'
   	}
 
   }

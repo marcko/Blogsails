@@ -1,3 +1,3 @@
-# practica 1
+# blog
 
 a [Sails](http://sailsjs.org) application

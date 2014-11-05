@@ -34,15 +34,12 @@ module.exports.routes = {
 
   '/': 'BlogController.index',
   'get /nuevo':{view:'nuevo'},
-  'post /nuevo': 'BlogController.postBlog',
-  'get /mostrar':'BlogController.getPost',
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  *  If a request to a URL doesn't match any of the custom routes above, it  *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
+  'get /mostrar':'BlogController.getBlog',
+  'get /mostrar/:id':'BlogController.getBlogid',
+  'get /mostrarid':{view:'mostrarid'},
+  'post /nuevo':'BlogController.postBlog'
+
+  /*
   *                                                                          *
   ***************************************************************************/
 

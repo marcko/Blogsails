@@ -1,1 +1,30 @@
-<%=blogid%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+	
+	p a{
+		margin-top: 50px;
+		margin-right: 50px;
+	}
+
+</style>
+<div class="row">
+			
+		<div class="col-md-6 col-md-offset-3">
+						
+			<% _.each(blog, function(id){ %>
+
+			<p></p>
+		 <h1 class="glyphicon glyphicon-fire"><%= id.title %> </h1>
+		 <p></p>
+		 <h4><%= id.body %> </h4>
+		 <p></p>
+		 <%})%>	
+
+		 <p>
+ 			<a href="/mostrar" class="btn btn-primary btn-lg">Regresar</a>
+ 	</p>
+ 
+		</div>
+
+	
+	</div>

@@ -58,11 +58,11 @@ module.exports.connections = {
   ***************************************************************************/
   mongo: {
     adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
+    url: 'mongodb://marco:root@proximus.modulusmongo.net:27017/po5paguP',
+    //port: 27017,
+    //user: 'marco',
+    //password: 'root',
+    //database: 'blog'
   },
 
   /***************************************************************************

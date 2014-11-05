@@ -7,28 +7,27 @@
 
 module.exports = {
 	index: function(req, res){
-		return res.view('index',{welcome:'Welcome'});
+		return res.view('index',{welcome:'Bienvenido'});
 	},
-
 	postBlog: function(req, res){
 		Blog.create(req.body).exec(function (err, result){
-			if(err) return sails.log.info(err);
-			console.log(result);
+			if(err) return res.send(err);
+			sails.log.info(result);
 		});
-		return res.redirect('mostrar');
+		return res.redirect('/mostrar');
 	},
-	getPost: function(req, res){
-
-		Blog.find().exec(function (err, blog){
-				if(err) return res.send(err);
-				res.view('mostrar',{blogs:blog});
+	getBlog: function(req, res){
+		Blog.find().exec(function (err, blogs){
+			if(err) return res.send(err)
+			return res.view('mostrar',{blogs:blogs});
 		});
 	},
-	getPostid: function(req, res){
-		Blog.findOne(req.id).exec(function (err,blogid){
-			res.view('mostrarid',{blogid:blogid});
+	getBlogid: function(req, res){
+		Blog.findById(req.params.id).exec(function (err, blog){
+			if(err) return res.send(err);
+			return res.view('mostrarid',{blog:blog});
 		});
 	}
-}
-
+	
+};
 
